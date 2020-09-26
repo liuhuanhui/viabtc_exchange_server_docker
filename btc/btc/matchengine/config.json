@@ -1,67 +1,115 @@
 {
-    "debug": true,
-    "process": {
-        "file_limit": 1000000,
-        "core_limit": 1000000000
+  "debug": true,
+  "process": {
+    "file_limit": 1000000,
+    "core_limit": 1000000000
+  },
+  "log": {
+    "path": "/var/log/trade/matchengine",
+    "flag": "fatal,error,warn,info,debug,trace",
+    "num": 10
+  },
+  "alert": {
+    "host": "matchengine",
+    "addr": "127.0.0.1:4444"
+  },
+  "svr": {
+    "bind": ["tcp@0.0.0.0:7316", "udp@0.0.0.0:7316"],
+    "buf_limit": 100,
+    "max_pkg_size": 10240,
+    "heartbeat_check": false
+  },
+  "cli": "tcp@127.0.0.1:7317",
+  "db_log": {
+    "host": "db",
+    "user": "root",
+    "pass": "root",
+    "name": "trade_log"
+  },
+  "db_history": {
+    "host": "db",
+    "user": "root",
+    "pass": "root",
+    "name": "trade_history"
+  },
+  "assets": [
+    {
+      "name": "usdt",
+      "prec_save": 20,
+      "prec_show": 8
     },
-    "log": {
-        "path": "/var/log/trade/matchengine",
-        "flag": "fatal,error,warn,info,debug,trace",
-        "num": 10
+    {
+      "name": "btc",
+      "prec_save": 20,
+      "prec_show": 8
     },
-    "alert": {
-        "host": "matchengine",
-        "addr": "127.0.0.1:4444"
+    {
+      "name": "eth",
+      "prec_save": 20,
+      "prec_show": 8
     },
-    "svr": {
-        "bind": [
-            "tcp@0.0.0.0:7316",
-            "udp@0.0.0.0:7316"
-        ],
-        "buf_limit": 100,
-        "max_pkg_size": 10240,
-        "heartbeat_check": false
+    {
+      "name": "hyr",
+      "prec_save": 20,
+      "prec_show": 8
     },
-    "cli": "tcp@127.0.0.1:7317",
-    "db_log": {
-        "host": "db",
-        "user": "root",
-        "pass": "root",
-        "name": "trade_log"
+    {
+      "name": "dash",
+      "prec_save": 12,
+      "prec_show": 8
+    }
+  ],
+  "markets": [
+    {
+      "name": "btcusdt",
+      "stock": {
+        "name": "btc",
+        "prec": 4
+      },
+      "money": {
+        "name": "usdt",
+        "prec": 2
+      },
+      "min_amount": "0.0001"
     },
-    "db_history": {
-        "host": "db",
-        "user": "root",
-        "pass": "root",
-        "name": "trade_history"
+    {
+      "name": "ethusdt",
+      "stock": {
+        "name": "eth",
+        "prec": 4
+      },
+      "money": {
+        "name": "usdt",
+        "prec": 2
+      },
+      "min_amount": "0.0001"
     },
-    "assets": [
-        {
-            "name": "USDT",
-            "prec_save": 20,
-            "prec_show": 8
-        },
-      {
-            "name": "BTC",
-            "prec_save": 20,
-            "prec_show": 8
-        }
-    ],
-    "markets": [
-        {
-            "name": "BTCUSDT",
-            "stock": {
-                "name": "BTC",
-                "prec": 8
-            },
-            "money": {
-                "name": "USDT",
-                "prec": 8
-            },
-            "min_amount": "0.001"
-        }
-    ],
-    "brokers": "kafka:9092",
-    "slice_interval": 3600,
-    "slice_keeptime": 259200
+    {
+      "name": "dashusdt",
+      "stock": {
+        "name": "eth",
+        "prec": 4
+      },
+      "money": {
+        "name": "usdt",
+        "prec": 2
+      },
+      "min_amount": "0.0001"
+    },
+    {
+      "name": "hyrusdt",
+      "stock": {
+        "name": "hyr",
+        "prec": 4
+      },
+      "money": {
+        "name": "usdt",
+        "prec": 2
+      },
+      "min_amount": "0.0001"
+    }
+  ],
+  "brokers": "kafka:9092",
+  "slice_interval": 3600,
+  "slice_keeptime": 259200
 }
