@@ -4,6 +4,8 @@ services:
   btc:
     container_name: btc-service
     build: ./btc/
+    volumes:
+      - /var/run/accessws/tmp/:/tmp/
     ports:
       - "17416:7416"
       - "17316:7316"
@@ -13,7 +15,6 @@ services:
       - "18080:8080"
       - "18081:8081"
       - "18091:8091"
-      - "9999:9999"
     depends_on:
       - zookeeper
       - mysql
