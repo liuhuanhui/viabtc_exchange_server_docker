@@ -91,6 +91,9 @@ EXPOSE 4444
 # accesshttp
 EXPOSE 8080
 
+# websocket
+EXPOSE 9999
+
 # monitor
 EXPOSE 8081
 
