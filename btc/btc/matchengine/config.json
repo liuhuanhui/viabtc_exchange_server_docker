@@ -54,6 +54,16 @@
       "prec_show": 8
     },
     {
+      "name": "eos",
+      "prec_save": 20,
+      "prec_show": 8
+    },
+    {
+      "name": "ltc",
+      "prec_save": 20,
+      "prec_show": 8
+    },
+    {
       "name": "dash",
       "prec_save": 12,
       "prec_show": 8
@@ -87,7 +97,7 @@
     {
       "name": "dashusdt",
       "stock": {
-        "name": "eth",
+        "name": "dash",
         "prec": 4
       },
       "money": {
@@ -104,7 +114,43 @@
       },
       "money": {
         "name": "usdt",
-        "prec": 2
+        "prec": 4
+      },
+      "min_amount": "0.0001"
+    },
+    {
+      "name": "eosusdt",
+      "stock": {
+        "name": "eos",
+        "prec": 4
+      },
+      "money": {
+        "name": "usdt",
+        "prec": 4
+      },
+      "min_amount": "0.0001"
+    },
+    {
+      "name": "ltcusdt",
+      "stock": {
+        "name": "ltc",
+        "prec": 4
+      },
+      "money": {
+        "name": "usdt",
+        "prec": 4
+      },
+      "min_amount": "0.0001"
+    },
+    {
+      "name": "ethbtc",
+      "stock": {
+        "name": "eth",
+        "prec": 4
+      },
+      "money": {
+        "name": "btc",
+        "prec": 6
       },
       "min_amount": "0.0001"
     }
