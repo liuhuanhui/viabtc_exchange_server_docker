@@ -15,7 +15,7 @@
     },
     "svr": {
         "bind": [
-            "tcp@0.0.0.0:9999"
+            "tcp@0.0.0.0:8083"
         ],
         "max_pkg_size": 102400,
         "protocol": "chat"
