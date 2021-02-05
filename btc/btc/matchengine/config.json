@@ -21,15 +21,15 @@
   },
   "cli": "tcp@127.0.0.1:7317",
   "db_log": {
-    "host": "db",
-    "user": "root",
-    "pass": "root",
+    "host": "165.3.114.144",
+    "user": "trade_log",
+    "pass": "fnsRdntRrp8ns3Km",
     "name": "trade_log"
   },
   "db_history": {
-    "host": "db",
-    "user": "root",
-    "pass": "root",
+    "host": "165.3.114.144",
+    "user": "trade_history",
+    "pass": "FA2fThknxWYxHT72",
     "name": "trade_history"
   },
   "assets": [
